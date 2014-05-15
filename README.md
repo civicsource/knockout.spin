@@ -1,4 +1,4 @@
-# Knockout Transitions Components
+# Knockout Spin Binding
 
 > Simple knockout binding that wraps [spin.js](http://fgnass.github.io/spin.js/).
 

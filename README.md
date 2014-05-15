@@ -14,4 +14,6 @@ Then add `knockout.spin.js` to your project.
 
 Include the script on your page (either via a normal script tag or via an AMD loader). Then use it like so:
 
-TODO: put an awesome example here...
+```html
+<span data-bind="spinner: yourBooleanObservable, spinnerOptions: { 'top': 0, 'left': 0 }"></span>
+```

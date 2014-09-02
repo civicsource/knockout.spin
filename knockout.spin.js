@@ -15,14 +15,15 @@
 			
 			// force this to the bottom of the event queue in the rendering thread,
 			// so we can get the computed color of the containing element after other bindings
-			// (e.g. class, style) have evalutated
+			// (e.g. class, style) have evalutated.
+			// add some more delay as the class bindings of the parent fire asynchronously.
 			setTimeout(function () {
 				var options = {};
 				options.color = $(element).css("color");
 				$.extend(options, ko.bindingHandlers.spinner.defaultOptions, ko.unwrap(allBindings.get("spinnerOptions")));
 
 				deferred.resolve(new Spinner(options));
-			}, 0);
+			}, 30);
 		},
 		update: function (element, valueAccessor, allBindingsAccessor) {
 			// when the spinner exists, pick up the existing one and call appropriate methods on it

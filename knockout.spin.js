@@ -4,7 +4,7 @@
 		define(["jquery", "knockout", "spin"], factory);
 	} else {
 		// Browser globals
-		factory(ko, jQuery);
+		factory(jQuery, ko, Spinner);
 	}
 }(this, function ($, ko, Spinner) {
 	ko.bindingHandlers.spinner = {
@@ -12,7 +12,7 @@
 			// initialize the object which will return the eventual spinner
 			var deferred = $.Deferred();
 			element.spinner = deferred.promise();
-			
+
 			// force this to the bottom of the event queue in the rendering thread,
 			// so we can get the computed color of the containing element after other bindings
 			// (e.g. class, style) have evalutated.

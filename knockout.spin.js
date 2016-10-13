@@ -1,6 +1,6 @@
 var ko = require("knockout");
 var $ = require("jquery");
-var Spinner = require("spin");
+var Spinner = require("spin.js");
 
 ko.bindingHandlers.spinner = {
 	init: function (element, valueAccessor, allBindings) {

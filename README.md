@@ -5,12 +5,14 @@ Simple knockout binding that wraps [spin.js](http://fgnass.github.io/spin.js/).
 ## Installation
 
 ```
-bower install knockout-spin
+npm install knockout.spin --save
 ```
 
-Then add `knockout.spin.js` to your project.
-
 ## Usage
+
+```js
+require("knockout.spin");
+```
 
 ```html
 <span data-bind="spinner: yourBooleanObservable, spinnerOptions: { 'top': 0, 'left': 0 }"></span>

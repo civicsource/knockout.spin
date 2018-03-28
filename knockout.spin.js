@@ -13,7 +13,7 @@ ko.bindingHandlers.spinner = {
 			// HACK: add some more delay as the class bindings of the parent fire asynchronously.
 			setTimeout(function () {
 				var options = {};
-				options.color = $(element).css("color");
+				options.color = element.ownerDocument.defaultView.getComputedStyle(element, null).color;
 				$.extend(options, ko.bindingHandlers.spinner.defaultOptions, ko.unwrap(allBindings.get("spinnerOptions")));
 
 				resolve(new Spinner(options));
@@ -28,14 +28,14 @@ ko.bindingHandlers.spinner = {
 		element.spinner.then(function (spinner) {
 			var isSpinning = result;
 			if (isSpinning) {
-				$(element).show();
+				element.style.display = "";
 				spinner.spin(element);
 			} else {
 				if (spinner.el) { //don't stop first time
 					spinner.stop();
 				}
 
-				$(element).hide();
+				element.style.display = "none";
 			}
 		});
 	},

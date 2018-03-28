@@ -1,5 +1,5 @@
 var ko = require("knockout");
-var $ = require("jquery");
+var objectAssign = require("object-assign");
 var Promise = require("pinkie-promise");
 var Spinner = require("spin.js");
 
@@ -14,7 +14,7 @@ ko.bindingHandlers.spinner = {
 			setTimeout(function () {
 				var options = {};
 				options.color = element.ownerDocument.defaultView.getComputedStyle(element, null).color;
-				$.extend(options, ko.bindingHandlers.spinner.defaultOptions, ko.unwrap(allBindings.get("spinnerOptions")));
+				objectAssign(options, ko.bindingHandlers.spinner.defaultOptions, ko.unwrap(allBindings.get("spinnerOptions")));
 
 				resolve(new Spinner(options));
 			}, 30);

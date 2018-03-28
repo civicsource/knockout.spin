@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "jquery": ">=1.10",
+    "pinkie-promise": "^2.0.1",
     "spin.js": ">=1 < 3"
   }
 }

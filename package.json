@@ -20,7 +20,6 @@
     "knockout": "3.x"
   },
   "dependencies": {
-    "jquery": ">=1.10",
     "object-assign": "^4.1.1",
     "pinkie-promise": "^2.0.1",
     "spin.js": ">=1 < 3"

@@ -1,6 +1,6 @@
 {
   "name": "knockout.spin",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "> Simple knockout binding that wraps [spin.js](http://fgnass.github.io/spin.js/).",
   "main": "knockout.spin.js",
   "scripts": {
@@ -20,7 +20,8 @@
     "knockout": "3.x"
   },
   "dependencies": {
-    "jquery": ">=1.10",
+    "object-assign": "^4.1.1",
+    "pinkie-promise": "^2.0.1",
     "spin.js": ">=1 < 3"
   }
 }
